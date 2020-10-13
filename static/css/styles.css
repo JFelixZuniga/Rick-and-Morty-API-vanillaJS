@@ -1,0 +1,116 @@
+/*Basic reset*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom properties */
+:root {
+  --fondo: #00a5be;
+  --blue: #005b8e;
+  --red: #f7391c;
+}
+
+/* Global styles */
+html {
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: system-ui, sans-serif;
+  background: var(--fondo);
+}
+.wrapper {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 2rem;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+
+.logo {
+  margin: 0 auto 2rem;
+  display: block;
+}
+
+.navigation {
+  transform-origin: left bottom;
+  transform: rotate(-90deg);
+  position: absolute;
+  width: 100vh;
+  left: 4rem;
+  bottom: 0;
+  text-align: center;
+  border: 1px solid red;
+}
+
+.character {
+  text-align: center;
+}
+
+.character-image {
+  border-radius: 10%;
+}
+
+.character-labels {
+  max-width: 30rem;
+}
+
+.character-label {
+  background-color: var(--blue);
+  padding: 1rem;
+  color: #fff;
+  border-radius: 1rem;
+  text-align: left;
+  font-size: 2.5rem;
+  font-weight: 400;
+  /* display: inl ine-flex; */
+}
+
+.character-name {
+  font-size: 3rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .character-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "name image" "labels image";
+  }
+  .character-name {
+    grid-area: name;
+    text-align: left;
+  }
+  .character-name h2 {
+    font-size: 5rem;
+    position: relative;
+    display: inline-flex;
+  }
+  .character-name h2::after {
+    content: "";
+    width: 8rem;
+    height: 0.6rem;
+    background: var(--red);
+    display: inline-flex;
+    position: absolute;
+    left: calc(100% + 0.5rem);
+    top: 50%;
+  }
+  .character-label {
+    grid-area: labels;
+  }
+  .character-image {
+    grid-area: image;
+  }
+}

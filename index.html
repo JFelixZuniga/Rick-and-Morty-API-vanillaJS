@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Hola!</h1>
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./static/css/styles.css" />
+  </head>
+  <body>
+    <img
+      class="logo"
+      src="./static/images/logo@2x.png"
+      width="280"
+      alt="Logo Rick and Morty"
+    />
 
-  <script src="./static/js/app.js"></script>
-</body>
+    <div id="character-container"></div>
+
+    <aside class="navigation">
+      <span>About</span>
+      <span>Name</span>
+    </aside>
+    <div class="wrapper">
+      <article class="character">
+        <div class="character-grid">
+          <img
+            class="character-image"
+            src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+            alt=""
+          />
+          <div class="character-name">
+            <h2>Rick Sanchez</h2>
+          </div>
+          <div class="character-labels">
+            <h3 class="character-label">Género: asdasdasd</h3>
+            <h3 class="character-label">Especie: asdasdasd</h3>
+            <h3 class="character-label">Status: asdasdasd</h3>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <script type="module" src="./static/js/app.js"></script>
+  </body>
 </html>
